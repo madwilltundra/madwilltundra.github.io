@@ -6,34 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Home decor</title>
     
-    <!-- Added Google Fonts for a Fresh Botanical / Soft Nature look -->
+    <!-- Added Google Fonts for a Mid-Century Retro / 70s look -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
 
     <style>
-        /* Fresh Botanical / Soft Nature Styles */
+        /* Mid-Century Retro / 70s Warmth Styles */
         :root {
-            --primary-color: #5F7161; /* Muted Sage Green */
-            --primary-hover: #4D5C4F;
-            --accent-color: #EFEAD8; /* Warm Oat */
-            --accent-light: #F9F8F4; /* Alabaster */
-            --text-color: #4A4A4A; /* Soft Charcoal */
-            --heading-color: #2C3625; /* Deep Forest Green */
-            --bg-color: #F4F3ED; /* Light Linen */
-            --card-bg: #FFFFFF;
-            --border-color: #E2DEC6;
-            --radius-card: 20px;
-            --radius-btn: 10px;
+            --primary-color: #d35a34; /* Burnt Orange */
+            --primary-hover: #b54522;
+            --accent-color: #eeb33b; /* Mustard Yellow */
+            --accent-alt: #6b7a57; /* Olive/Avocado Green */
+            --text-color: #3d312a; /* Dark Espresso Brown */
+            --heading-color: #241a14; /* Deep Brown/Black */
+            --bg-color: #f5eedf; /* Warm Eggshell/Cream */
+            --card-bg: #fcfaf5; /* Off-white for cards */
+            --border-color: #241a14;
+            --radius-card: 12px;
+            --radius-btn: 6px;
         }
 
         body {
-            font-family: 'Nunito', sans-serif;
+            font-family: 'DM Sans', sans-serif;
             line-height: 1.7;
             color: var(--text-color);
             background-color: var(--bg-color);
-            /* Soft vertical stripes for a subtle wallpaper effect */
-            background-image: repeating-linear-gradient(to right, transparent, transparent 40px, rgba(95, 113, 97, 0.02) 40px, rgba(95, 113, 97, 0.02) 80px);
+            /* Subtle retro dot pattern */
+            background-image: radial-gradient(rgba(61, 49, 42, 0.08) 2px, transparent 2px);
+            background-size: 24px 24px;
             margin: 0;
             padding: 0;
             -webkit-font-smoothing: antialiased;
@@ -41,48 +42,50 @@
 
         /* Typography Override */
         h1, h2, h3, h4, .username {
-            font-family: 'Lora', serif;
+            font-family: 'Abril Fatface', serif;
             color: var(--heading-color);
-            font-weight: 500;
+            font-weight: 400;
+            letter-spacing: 0.5px;
         }
 
         .container {
-            max-width: 680px;
+            max-width: 700px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Top Navigation - Clean & Fresh */
+        /* Top Navigation - Bold & Retro */
         .top-nav {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            padding: 18px 0;
+            background-color: var(--accent-color);
+            padding: 15px 0;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid var(--border-color);
-            box-shadow: 0 4px 15px rgba(95, 113, 97, 0.05);
+            border-bottom: 3px solid var(--border-color);
+            box-shadow: 0 4px 0 rgba(36, 26, 20, 0.1);
         }
 
         .top-nav a {
-            color: var(--text-color);
+            color: var(--heading-color);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            padding: 8px 12px;
+            letter-spacing: 1px;
+            padding: 6px 14px;
             margin: 0 8px;
             cursor: pointer;
+            border: 2px solid transparent;
             border-radius: var(--radius-btn);
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
         }
 
         .top-nav a:hover {
-            color: var(--heading-color);
-            background-color: var(--accent-light);
+            background-color: var(--card-bg);
+            border-color: var(--border-color);
+            box-shadow: 2px 2px 0 var(--border-color);
+            transform: translateY(-2px);
         }
 
         /* Header */
@@ -93,23 +96,30 @@
 
         header h1 {
             margin: 0;
-            font-size: 3.5rem;
+            font-size: 4rem;
             color: var(--primary-color);
-            letter-spacing: -0.5px;
+            letter-spacing: 1px;
             cursor: pointer;
-            transition: color 0.3s ease;
+            text-shadow: 3px 3px 0 var(--accent-color), 5px 5px 0 var(--border-color);
+            transition: transform 0.2s ease;
         }
         
         header h1:hover {
-            color: var(--heading-color);
+            transform: scale(1.02) rotate(-1deg);
         }
 
         header p {
-            margin: 15px auto 0;
-            font-size: 1.15rem;
-            color: var(--text-color);
-            font-weight: 400;
-            max-width: 450px;
+            margin: 20px auto 0;
+            font-size: 1.25rem;
+            color: var(--card-bg);
+            font-weight: 700;
+            background-color: var(--accent-alt);
+            display: inline-block;
+            padding: 6px 20px;
+            border: 2px solid var(--border-color);
+            border-radius: 30px;
+            box-shadow: 3px 3px 0 var(--border-color);
+            transform: rotate(-1.5deg);
         }
 
         /* Post Cards */
@@ -118,9 +128,9 @@
             background: var(--card-bg);
             border-radius: var(--radius-card);
             margin-bottom: 50px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 10px 30px rgba(95, 113, 97, 0.06);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 3px solid var(--border-color);
+            box-shadow: 6px 6px 0 var(--border-color);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
             overflow: hidden;
         }
 
@@ -129,9 +139,8 @@
         }
 
         .post-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(95, 113, 97, 0.12);
-            border-color: var(--primary-color);
+            transform: translate(-3px, -3px);
+            box-shadow: 9px 9px 0 var(--primary-color);
         }
 
         .single-post {
@@ -142,22 +151,23 @@
             padding: 20px 30px;
             display: flex;
             align-items: center;
-            border-bottom: 1px solid var(--accent-color);
-            background-color: var(--accent-light);
+            border-bottom: 3px solid var(--border-color);
+            background-color: #f0e6d3;
         }
 
         .post-header img.avatar {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px; /* Soft square instead of circle */
+            width: 48px;
+            height: 48px;
+            border-radius: 8px; /* Slightly squared for retro look */
             margin-right: 15px;
-            border: 2px solid #FFFFFF;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border: 2px solid var(--border-color);
+            box-shadow: 2px 2px 0 var(--border-color);
+            background-color: var(--accent-color);
             object-fit: cover;
         }
 
         .post-header .username {
-            font-size: 1.15rem;
+            font-size: 1.3rem;
             color: var(--heading-color);
         }
 
@@ -166,6 +176,7 @@
             display: block;
             max-height: 450px;
             object-fit: cover;
+            border-bottom: 3px solid var(--border-color);
         }
 
         .post-content {
@@ -174,40 +185,43 @@
 
         .post-content h1,
         .post-content h2 {
-            font-size: 2.2rem;
-            line-height: 1.25;
+            font-size: 2.4rem;
+            line-height: 1.2;
             margin-bottom: 15px;
             color: var(--heading-color);
         }
 
         .post-content p {
             margin-bottom: 25px;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
+            font-weight: 500;
         }
 
         .post-content a {
             color: var(--primary-color);
             text-decoration: none;
             font-weight: 700;
-            border-bottom: 2px solid transparent;
-            transition: all 0.3s ease;
+            background-color: rgba(211, 90, 52, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
         }
 
         .post-content a:hover {
-            color: var(--heading-color);
-            border-bottom-color: var(--primary-color);
+            background-color: var(--primary-color);
+            color: var(--card-bg);
         }
 
         .post-footer {
             padding: 20px 40px;
-            color: var(--primary-color);
-            font-weight: 600;
-            font-size: 0.95rem;
+            color: var(--heading-color);
+            font-weight: 700;
+            font-size: 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-top: 1px solid var(--accent-color);
-            background-color: var(--accent-light);
+            border-top: 3px solid var(--border-color);
+            background-color: var(--accent-color);
         }
 
         /* Single Post Overrides */
@@ -215,64 +229,67 @@
             max-height: none;
         }
 
-        /* Back Button - Fresh Pill */
+        /* Back Button - Retro Solid Pill */
         .back-button {
             display: inline-flex;
             align-items: center;
             margin-bottom: 25px;
-            color: #FFFFFF;
+            color: var(--card-bg);
             background-color: var(--primary-color);
             text-decoration: none;
             font-weight: 700;
-            font-size: 0.95rem;
+            font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             cursor: pointer;
-            padding: 12px 24px;
-            border-radius: var(--radius-btn);
-            box-shadow: 0 4px 10px rgba(95, 113, 97, 0.2);
-            transition: all 0.3s ease;
+            padding: 10px 24px;
+            border: 3px solid var(--border-color);
+            border-radius: 30px;
+            box-shadow: 4px 4px 0 var(--border-color);
+            transition: all 0.2s ease;
         }
 
         .back-button:hover {
             background-color: var(--primary-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(95, 113, 97, 0.3);
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0 var(--border-color);
         }
 
         /* Clean overrides for inline styles generated from content */
         .post-content div[style*="background"] {
-            background: var(--accent-light) !important;
-            border: 1px solid var(--border-color) !important;
+            background: #f0e6d3 !important;
+            border: 3px solid var(--border-color) !important;
             border-radius: 12px !important;
             padding: 25px !important;
             margin: 35px 0 !important;
-            box-shadow: 0 2px 8px rgba(95, 113, 97, 0.03) !important;
+            box-shadow: 4px 4px 0 var(--border-color) !important;
         }
         
         .post-content h3[style*="border-left"] {
-            border-left: 4px solid var(--primary-color) !important;
-            color: var(--heading-color) !important;
-            padding-left: 15px !important;
+            border-left: none !important;
+            color: var(--primary-color) !important;
+            padding-left: 0 !important;
+            text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
         }
 
         .post-content h4[style*="background"] {
-            background: var(--accent-color) !important;
-            color: var(--heading-color) !important;
-            border: none !important;
+            background: var(--accent-alt) !important;
+            color: var(--card-bg) !important;
+            border: 2px solid var(--border-color) !important;
             border-radius: 8px !important;
             padding: 10px 15px !important;
+            box-shadow: 2px 2px 0 var(--border-color) !important;
         }
 
         .post-content span[style*="background"] {
-            background: #FFFFFF !important;
-            border: 1px solid var(--border-color) !important;
-            color: var(--primary-color) !important;
-            border-radius: 6px !important;
+            background: var(--accent-color) !important;
+            border: 2px solid var(--border-color) !important;
+            color: var(--heading-color) !important;
+            border-radius: 20px !important;
             font-weight: 700;
-            font-size: 0.85rem !important;
-            padding: 5px 12px !important;
-            box-shadow: 0 2px 0 var(--border-color) !important;
+            font-size: 0.9rem !important;
+            padding: 6px 14px !important;
+            box-shadow: 2px 2px 0 var(--border-color) !important;
             transform: none !important;
         }
     </style>
